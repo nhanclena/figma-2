@@ -1,0 +1,57 @@
+/* PC */
+@media (min-width: 992px) {
+}
+/* Tablet & Mobile */
+@media (max-width: 991.98px) {
+  /* Ẩnn navbar trên tablet và mobile */
+  .navbar {
+    display: none;
+  }
+  /* Chuyển logo ra giữa */
+  .header-top {
+    position: relative;
+  }
+  .logo__header {
+    position: absolute;
+    left: 50%;
+    translate: -50% -50%;
+  }
+  /* Căn lại vị trí của menu icon */
+  .menu-header__icon {
+    position: absolute;
+    top: 38px;
+    left: 26px;
+    color: #fff;
+    width: 24px;
+  }
+  /* Overlay  */
+  .menu-overlay {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.3);
+    /* inset dùng giống padding */
+    inset: 0;
+    z-index: 1;
+    /* ở điều kiện bth ẩn overlay đi */
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+  }
+  /* Kt nếu menu-checkbox được checked thì hiện (overlay/lớp phủ),
+    Kt xem menu-checkbox có đc checked k, nếu có thì tác động vào menu-overlay  */
+  .menu-checkbox:checked ~ .menu-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+/* tablet */
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+/* mobile */
+@media (max-width: 767.98px) {
+}
+/* tạm ẩn phần không liên quan */
+.hero,
+.footer,
+main {
+  display: none;
+}

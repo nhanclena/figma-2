@@ -94,6 +94,27 @@ a {
   justify-content: space-between;
   align-items: center;
 }
+/* tự thêm vào */
+.logo__header {
+  position: relative;
+}
+.logo {
+  border-radius: 50%;
+}
+.shine-smile {
+  position: absolute;
+  font-size: 20px;
+  top: -5px;
+  left: 37px;
+  color: #fff;
+}
+span {
+  font-size: 14px;
+  position: absolute;
+  bottom: -20px;
+  left: 30px;
+}
+/* ===> */
 .navbar__list {
   display: flex;
 }
@@ -675,13 +696,13 @@ a {
   line-height: 1.56;
 }
 /* ========animation========= */
-.work .section-heading{
+.work .section-heading {
   animation-duration: 2s;
- animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
 }
-.service .service__heading{
- animation-iteration-count: infinite;
- animation-delay: 3s;
+.service .service__heading {
+  animation-iteration-count: infinite;
+  animation-delay: 3s;
 }
 /* ========AOS======= */
 [data-aos] {
