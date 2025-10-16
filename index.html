@@ -111,7 +111,7 @@
 
           <!-- nav -->
           <nav class="navbar">
-            <ul class="navbar__list">
+            <ul class="navbar__list" id="navbar__list--pc">
               <li class="navbar__item">
                 <a href="#!" class="navbar__link navbar__link--active">Home</a>
               </li>
@@ -166,20 +166,53 @@
         </section>
       </div>
     </header>
-    <!-- tablet/mobile header -->
+    <!-- ===tablet/mobile header=== -->
     <div class="mobile-header">
       <!-- tablet/mobile menu -->
        <input class="menu-checkbox" type="checkbox" name="menu-checkbox" id="menu-checkbox" hidden>
        <!-- for đến id menu-checkbox, khi kích vào label tương ứng với việc kích vào checkbox (**) -->
-     <label for="menu-checkbox">
-        <svg class="menu-header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+       <label for="menu-checkbox">
+           <svg class="menu-header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
               <path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"></path>
-        </svg>
-     </label>
-     <!-- overlay -->
+           </svg>
+       </label>
+     <!-- ===overlay=== -->
      <!-- khi kích vào (menu/dấu 3 gạch) thì overlay hiện ra, khi kích vào (màn hình/phần nền) thì overlay mất đi  -->
      <!-- Lưu ý: có thể tạo nhiều thẻ label và cùng for đến 1 id của checkbox, chức năng hoạt động thì tương tự như trên (**) -->
       <label class="menu-overlay" for="menu-checkbox"></label>
+      <!-- ===menu-content=== -->
+       <div class="menu-drawer">
+        <!-- ==menu-top== -->
+         <div class="menu-drawer__top">
+          <!-- logo -->
+           <a href="./">
+                 <div class="logo__menu">
+                   <img src="./assets/img/logo.png" alt="Shine Smile" class="logo "/>
+                    <p class="shine-smile">Shine <br> simle </p>
+                 </div>
+          </a>
+          <!-- icon close menu -->
+         <label for="menu-checkbox">
+            <svg class="close__menu" xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 640 640">
+              <path fill="currentColor" 
+              d="M320 576C461.4 576 576 461.4 576 320C576 178.6 461.4 64 320 64C178.6 64 64 178.6 64 320C64 461.4 178.6 576 320 576zM231 231C240.4 221.6 255.6 221.6 264.9 231L319.9 286L374.9 231C384.3 221.6 399.5 221.6 408.8 231C418.1 240.4 418.2 255.6 408.8 264.9L353.8 319.9L408.8 374.9C418.2 384.3 418.2 399.5 408.8 408.8C399.4 418.1 384.2 418.2 374.9 408.8L319.9 353.8L264.9 408.8C255.5 418.2 240.3 418.2 231 408.8C221.7 399.4 221.6 384.2 231 374.9L286 319.9L231 264.9C221.6 255.5 221.6 240.3 231 231z"/>
+            </svg>
+         </label>
+
+         </div>
+        <!-- ==nav-mobile== -->
+        <ul id="navbar__list--mobile"></ul>
+        <!-- copy toàn bộ navbar từ PC sang Mobile.
+         Ta sử dụng javascript để copy navbar -->
+         <script>
+          // lấy toàn bộ thông tin ở trong (navbar__list--pc) và gán vào biến (navPC). Dòng ở dưới tương tự
+          const navPC = document.querySelector("#navbar__list--pc")
+          const navMobile = document.querySelector("#navbar__list--mobile")
+          // để copy. Tức là lầy toàn bộ thông tin (navPC) và gán vào (navMobile)
+          navMobile.innerHTML=navPC.innerHTML;
+         </script>
+       </div>
     </div>
     <!-- =================main================= -->
     <main>

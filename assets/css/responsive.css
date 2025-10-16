@@ -1,5 +1,8 @@
 /* PC */
 @media (min-width: 992px) {
+  .mobile-header {
+    display: none;
+  }
 }
 /* Tablet & Mobile */
 @media (max-width: 991.98px) {
@@ -41,6 +44,40 @@
   .menu-checkbox:checked ~ .menu-overlay {
     opacity: 1;
     visibility: visible;
+  }
+  /* Code cho menu drawer */
+  .menu-drawer {
+    position: fixed;
+    background-color: #2e1919;
+    inset: 0 40% 0 0;
+    z-index: 2;
+    transform: translateX(-100%);
+    transition: 0.5s;
+    padding: 60px;
+  }
+  /* Kt nếu checkbox được checked thì hiện menu */
+  .menu-checkbox:checked ~ .menu-drawer {
+    transform: translateX(0);
+  }
+  /* Menu top */
+  .close__menu {
+    width: 24px;
+    color: #fff;
+  }
+  .menu-drawer__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #navbar__list--mobile {
+    margin-top: 25px;
+  }
+  .navbar__link {
+    display: block;
+    font-size: 2rem;
+  }
+  .navbar__link:hover {
+    background-color: #00ffff37;
   }
 }
 /* tablet */
