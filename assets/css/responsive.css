@@ -79,7 +79,101 @@
   .navbar__link:hover {
     background-color: #00ffff37;
   }
+  /* Khối Hero */
+  .hero {
+    flex-direction: column;
+    gap: 50px;
+  }
+  /* để thay đổi thứ tự ta dùng order */
+  .hero__content {
+    order: 2;
+    width: 80%;
+    text-align: center;
+    margin: 22px auto;
+  }
+  .hero__media {
+    order: 1;
+  }
+  .hero__row {
+    justify-content: center;
+  }
+  /* Khối Service */
+  .service__row {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .service__img {
+    width: 100%;
+  }
+  .service__item {
+    width: 90%;
+    text-align: start;
+  }
+  .service__list {
+    text-align: center;
+  }
+  /* khối Work */
+  .work__list {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+  /* Khối About */
+  .about-row {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  .about__media {
+    width: 100%;
+  }
+  /* ẩn ảnh Small */
+  .about__img--small {
+    display: none;
+  }
+  .about__img--big {
+    width: 100%;
+    border-radius: 15px;
+    margin: 25px auto;
+  }
+  .about-content {
+    width: 90%;
+    text-align: center;
+  }
+  /* Khối Team */
+  .team__list {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+  }
+  .team-item__thumb {
+    margin: 0 auto;
+  }
+  /* Khối Install */
+  .install__img {
+    display: none;
+  }
+  .install__content {
+    width: 90%;
+    margin: 0 auto;
+  }
+  /* Khối Blog */
+  .blog__inner {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  .blog__content {
+    order: 2;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .blog__list {
+    order: 1;
+  }
+  .blog__heading {
+    max-width: 90%;
+  }
 }
+
 /* tablet */
 @media (min-width: 768px) and (max-width: 991.98px) {
 }
@@ -87,8 +181,6 @@
 @media (max-width: 767.98px) {
 }
 /* tạm ẩn phần không liên quan */
-.hero,
-.footer,
-main {
+.footer {
   display: none;
 }
