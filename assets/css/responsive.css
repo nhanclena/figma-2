@@ -174,13 +174,122 @@
   }
 }
 
-/* tablet */
+/* Tablet */
 @media (min-width: 768px) and (max-width: 991.98px) {
+  /* Khối Footer */
+  .footer-hidden-tablet {
+    display: none;
+  }
+  .footer__top {
+    grid-template-columns: 0.5fr 0.5fr 1fr;
+  }
+  .show-on-mobile {
+    display: none;
+  }
 }
-/* mobile */
+/* Mobile */
 @media (max-width: 767.98px) {
+  .header__action {
+    display: none;
+  }
+  .menu-header__icon {
+    top: 16px;
+  }
+  .menu-drawer {
+    inset: 0 20% 0 0;
+    padding: 40px;
+  }
+  /* tự thêm vào */
+  .logo__menu .shine-smile {
+    top: -22px;
+    left: 15px;
+  }
+  .navbar__item {
+    list-style-type: none;
+  }
+  /* thêm vạch kẻ ngăn cta group */
+  .separate {
+    border-top: 1.5px solid #8c8b8b;
+    margin-top: 10px;
+  }
+  /* Khối Hero */
+  .hero__img-small {
+    display: none;
+  }
+  .hero__img-large {
+    width: 100%;
+    height: auto;
+  }
+  .hero__heading {
+    font-size: 3rem;
+  }
+  .hero__desc {
+    font-size: 1.3rem;
+  }
+  .hero__row {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  /* Khối Service */
+  .service {
+    padding: 70px 0;
+  }
+  .service__desc {
+    width: 93%;
+  }
+  .service__img {
+    /* height:auto; để tự căn chỉnh */
+    height: auto;
+  }
+  /* Khối Work */
+  .work__desc {
+    width: 100%;
+  }
+  .work-item {
+    padding: 20px;
+  }
+  /* Khối About */
+  .about {
+    margin-top: 20px;
+    padding: 40px 0;
+  }
+  .section-heading {
+    font-size: 3rem;
+  }
+  /* Khối Team */
+  .team__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  /* Khối instal */
+  .install__inner {
+    margin: 40px 0;
+    padding: 0 8px;
+  }
+  .install__content {
+    max-width: 250px;
+  }
+  .install__desc {
+    font-size: 1.3rem;
+  }
+  /* Khối Blog */
+  .blog__list {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+  .blog__heading {
+    text-align: center;
+  }
+  /* Khối Appointment */
+  .appointment__inner {
+    padding: 30px 5px;
+  }
+  /* Khối Footer */
+  .footer__top {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+  .footer__copyright {
+    margin-top: 20px;
+  }
 }
-/* tạm ẩn phần không liên quan */
-.footer {
-  display: none;
-}
+/* tạm ẩn những phần k liên quan */

@@ -211,6 +211,18 @@
           // để copy. Tức là lầy toàn bộ thông tin (navPC) và gán vào (navMobile)
           navMobile.innerHTML=navPC.innerHTML;
          </script>
+         <!-- separate dấu ngăn cách -->
+          <div class="separate"></div>
+          <!-- cta action -->
+           <!-- chỉ hiện trên Mobile -->
+              <div class="show-on-mobile">
+                <li class="navbar__item">
+                  <a href="#!" class="navbar__link">Log In</a>
+                </li>
+                <li class="navbar__item">
+                  <a href="#!" class="navbar__link">Sign Up</a>
+                </li>
+              </div>
        </div>
     </div>
     <!-- =================main================= -->
@@ -594,10 +606,10 @@
           <!-- top footer -->
            <div class="footer__top">
             <!-- column 1 -->
-            <div class="footer__column">
+            <div class="footer__column footer-hidden-tablet" >
               <a href="./">
-            <img src="./assets/img/logo.png" alt="Shine Smile" class="logo"
-          /></a>
+                   <img src="./assets/img/logo.png" alt="Shine Smile" class="logo"/> 
+              </a>
           <p class="footer__desc">Exceptional dental care for all ages. Your great smile begins with a great dentist.</p>
             </div>
             <!-- column 2 -->
